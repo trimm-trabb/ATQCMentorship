@@ -1,4 +1,4 @@
-package com.java.basics;
+package com.java.basics.dto;
 
 import java.io.Serializable;
 

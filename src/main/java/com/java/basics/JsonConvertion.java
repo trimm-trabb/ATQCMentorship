@@ -3,6 +3,7 @@ package com.java.basics;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.gson.Gson;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.java.basics.dto.Person;
 
 public class JsonConvertion {
 

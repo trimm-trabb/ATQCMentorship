@@ -1,5 +1,7 @@
 package com.java.basics;
 
+import com.java.basics.dto.Person;
+
 import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
