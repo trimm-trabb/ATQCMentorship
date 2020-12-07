@@ -19,8 +19,6 @@ public class IPParser {
             while (li.hasNext()) {
                 s.append(li.nextLine());
             }
-        } catch (FileNotFoundException ex) {
-            LOGGER.log(Level.WARNING, "An exception was thrown", ex);
         } catch (IOException ex) {
             LOGGER.log(Level.WARNING, "An exception was thrown", ex);
         }
