@@ -11,7 +11,7 @@ public class Files {
 
     private final static Logger LOGGER = Logger.getLogger(Files.class.getName());
 
-    public static ArrayList<Integer> readIntegersWithBufferedReader(File file) {
+    public static List<Integer> readIntegersWithBufferedReader(File file) {
         ArrayList<Integer> integers = null;
         BufferedReader br = null;
         try {
@@ -37,7 +37,7 @@ public class Files {
         return integers;
     }
 
-    public static ArrayList<Integer> readIntegersWithLineIterator(File file) {
+    public static List<Integer> readIntegersWithLineIterator(File file) {
         ArrayList<Integer> integers = null;
         try (LineIterator li = FileUtils.lineIterator(file, "UTF-8")) {
             integers = new ArrayList<>();
@@ -53,7 +53,7 @@ public class Files {
         return integers;
     }
 
-    public static double findAverage(ArrayList<Integer> integers) {
+    public static double findAverage(List<Integer> integers) {
         double average = 0;
         if (!integers.isEmpty()) {
             int sum = 0;
@@ -70,8 +70,8 @@ public class Files {
         ClassLoader classLoader = Files.class.getClassLoader();
         try {
             File file = new File(classLoader.getResource(fileName).getFile());
-            ArrayList<Integer> integers1 = readIntegersWithBufferedReader(file);
-            ArrayList<Integer> integers2 = readIntegersWithLineIterator(file);
+            List<Integer> integers1 = (ArrayList)readIntegersWithBufferedReader(file);
+            List<Integer> integers2 = (ArrayList)readIntegersWithLineIterator(file);
             double average = findAverage(integers1);
             System.out.println(integers1);
             System.out.println(integers2);
