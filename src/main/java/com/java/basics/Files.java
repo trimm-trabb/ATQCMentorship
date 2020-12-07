@@ -70,8 +70,8 @@ public class Files {
         ClassLoader classLoader = Files.class.getClassLoader();
         try {
             File file = new File(classLoader.getResource(fileName).getFile());
-            List<Integer> integers1 = (ArrayList)readIntegersWithBufferedReader(file);
-            List<Integer> integers2 = (ArrayList)readIntegersWithLineIterator(file);
+            List<Integer> integers1 = readIntegersWithBufferedReader(file);
+            List<Integer> integers2 = readIntegersWithLineIterator(file);
             double average = findAverage(integers1);
             System.out.println(integers1);
             System.out.println(integers2);
