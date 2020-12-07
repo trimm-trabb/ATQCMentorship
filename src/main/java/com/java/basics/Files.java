@@ -23,8 +23,6 @@ public class Files {
                     integers.add(Integer.parseInt(s));
                 }
             }
-        } catch (FileNotFoundException ex) {
-            LOGGER.log(Level.WARNING, "An exception was thrown", ex);
         } catch (IOException ex) {
             LOGGER.log(Level.WARNING, "An exception was thrown", ex);
         } finally {
@@ -49,8 +47,6 @@ public class Files {
                     integers.add(Integer.parseInt(s));
                 }
             }
-        } catch (FileNotFoundException ex) {
-            LOGGER.log(Level.WARNING, "An exception was thrown", ex);
         } catch (IOException ex) {
             LOGGER.log(Level.WARNING, "An exception was thrown", ex);
         }
